@@ -1,0 +1,21 @@
+﻿<Window x:Class="IconGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:h="http://helixtoolkit.codeplex.com"
+        xmlns:local="clr-namespace:IconGenerator"
+        Title="Helix Toolkit Icon Generator - Press F12 to grab the icon" Height="600" Width="600">
+    <Grid>
+        <h:HelixViewport3D x:Name="view" IsHeadLightEnabled="True" ZoomExtentsWhenLoaded="True" Background="LightBlue" Width="512" Height="512">
+            <h:HelixViewport3D.Camera>
+                <PerspectiveCamera FieldOfView="45" UpDirection="0,1,0" LookDirection="0,0,-1" Position="0,0,10">
+                </PerspectiveCamera>
+            </h:HelixViewport3D.Camera>
+            <!--<h:SphereVisual3D Center="1,1,1" Radius="1.2" Fill="White"/>
+            <h:SphereVisual3D Center="-1,-1,1" Radius="1.4" Fill="Red"/>
+            <h:SphereVisual3D Center="-1,1,-1" Radius="1.6" Fill="Green"/>
+            <h:SphereVisual3D Center="1,-1,-1" Radius="1.8" Fill="Blue"/>-->
+            <!--<h:HelixVisual3D Turns="4" Length="10" MeshSizeU="500" MeshSizeV="500"/>-->
+            <local:TrefoilKnotVisual3D MeshSizeU="360" MeshSizeV="240" Fill="DarkRed" C2="1.7" />
+        </h:HelixViewport3D>
+    </Grid>
+</Window>
